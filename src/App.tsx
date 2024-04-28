@@ -9,12 +9,17 @@ import Repo from "./pages/Repo";
 import Footer from "./components/Footer";
 
 import GlobalStyles from "./styles/GlobalStyles";
+import { useState } from "react";
+import { ThemeName, themes } from "./styles/Themes";
 
 function App() {
+	const [themeName, setThemeName] = useState<ThemeName>("light");
+	const currentTheme = themes[themeName];
+
 	return (
-		<ThemeProvider>
+		<ThemeProvider theme={currentTheme}>
 			<BrowserRouter>
-				<Header />
+				<Header themeName={themeName} setThemeName={setThemeName} />
 
 				<Routes>
 					<Route path="/" element={<Profile />} />

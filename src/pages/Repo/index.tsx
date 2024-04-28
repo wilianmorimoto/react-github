@@ -44,7 +44,7 @@ const Repo: React.FC = () => {
 				</li>
 			</Stats>
 
-			<LinkButton href={"https://github.com/wilianmorimoto/projeto-carros"}>
+			<LinkButton target='_blank' href={"https://github.com/wilianmorimoto/projeto-carros"}>
 				<GithubIcon />
 				<span>View on GitHub</span>
 			</LinkButton>
