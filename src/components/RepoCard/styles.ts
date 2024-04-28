@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import { RiBookmarkLine, RiStarLine } from "react-icons/ri";
+import { RiBookMarkedLine, RiStarLine } from "react-icons/ri";
 import { AiOutlineFork } from "react-icons/ai";
 
 export const Container = styled.div`
@@ -45,44 +45,50 @@ const iconCSS = css`
 	flex-shrink: 0;
 `;
 
-export const RepoIcon = styled(RiBookmarkLine)`
+export const RepoIcon = styled(RiBookMarkedLine)`
 	${iconCSS}
 `;
 
 export const Botside = styled.div`
-  ul{
-    display: flex;
-    align-items: center;
+	ul {
+		display: flex;
+		align-items: center;
 
-    >li {
-      display:flex;
-      align-items:center;
-      margin-right:16px;
+		> li {
+			display: flex;
+			align-items: center;
+			margin-right: 16px;
 
-      >span {
-        margin-left:5px;
-        font-size:12px;
-        color:var(--gray);
-      }
-    }
-  }
+			> span {
+				margin-left: 5px;
+				font-size: 12px;
+				color: var(--gray);
+			}
+		}
+	}
 
-  .language {
-    width:12px;
-    height:12px;
-    border-radius:50%;
-    flex-shrink:0;
+	.language {
+		width: 12px;
+		height: 12px;
+		border-radius: 50%;
+		flex-shrink: 0;
 
-    &.other {
-      background: var(--other-language);
-    }
-    &.javascript {
-      background: var(--javascript);
-    }
-    &.typescript {
-      background: var(--typescript);
-    }
-  }
+		&.other {
+			background: var(--other-language);
+		}
+		&.javascript {
+			background: var(--javascript);
+		}
+		&.typescript {
+			background: var(--typescript);
+		}
+		&.html {
+			background: var(--html);
+		}
+		&.css {
+			background: var(--css);
+		}
+	}
 `;
 
 export const StarIcon = styled(RiStarLine)`
